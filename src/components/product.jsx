@@ -8,12 +8,8 @@ class Product extends Component {
         <img src={"/assets/img/" + this.props.img} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{this.props.title}</h5>
-          <p className="card-text">
-            {this.props.description}
-          </p>
-          <a href="/" className="btn btn-primary">
-           Hinzufügen
-          </a>
+          <p className="card-text">{this.props.description}</p>
+          <button onClick={this.props.onAdd} className="btn btn-primary">Hinzufügen</button>
         </div>
       </div>
     );
