@@ -5,14 +5,14 @@ class Product extends Component {
   render() {
     return (
       <div className="card" styles={{ width: "18rem" }}>
-        <img src="/assets/img/carrots.jpg" className="card-img-top" alt="..." />
+        <img src={"/assets/img/" + this.props.img} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">Card title</h5>
+          <h5 className="card-title">{this.props.title}</h5>
           <p className="card-text">
-            Some quick example text to build on the card title and make up the bulk of the card’s content.
+            {this.props.description}
           </p>
           <a href="/" className="btn btn-primary">
-            Go somewhere
+           Hinzufügen
           </a>
         </div>
       </div>
