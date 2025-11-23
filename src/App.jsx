@@ -9,7 +9,7 @@ class App extends Component {
   addItem = (amount, name, price) => {
     let currentItems = this.state.items;
 
-    let existingItem = this.state.items.find((item) => item.name == name);
+    let existingItem = this.state.items.find((item) => item.name === name);
     if (existingItem) {
       existingItem.amount++;
       existingItem.price = existingItem.price + existingItem.price;
@@ -22,7 +22,6 @@ class App extends Component {
     }
 
     this.setState({ items: currentItems });
-    console.log(this.state);
   };
 
   render() {
